@@ -14,9 +14,9 @@ wordpress__fail2ban__action_permanent_ban:
     grep -q "<ip>" "$FILE" || ip route list | grep -q 'unreachable <ip>' || ip route add unreachable <ip>
     grep -q "<ip>" "$FILE" || echo "<ip>" >> "$FILE"
 
-wordpress__fail2ban__filter_ddos:
-  name: 'wordpress-ddos'
-  failregex: '^<HOST> .* "(GET|POST)'
+#wordpress__fail2ban__filter_ddos:
+#  name: 'wordpress-ddos'
+#  failregex: '^<HOST> .* "(GET|POST)'
 
 wordpress__fail2ban__filter_login:
   name: 'wordpress-login'
